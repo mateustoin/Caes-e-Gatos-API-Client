@@ -8,7 +8,15 @@ class AnimalView(object):
     def view_photo(image):
         image = cv2.resize(image, (640, 480))
         cv2.imshow("Foto do animal", image)
-        cv2.waitKey(0)
+
+        while 1:
+            tecla = cv2.waitKey(33)
+            if tecla == 27: # Esc pressionado 
+                exit(0)
+            if tecla == -1:
+                continue
+            else:
+                break
 
     @staticmethod
     def view_video(nome_video):
@@ -29,6 +37,11 @@ class AnimalView(object):
                 # Press Q on keyboard to  exit 
                 if cv2.waitKey(25) & 0xFF == ord('q'): 
                     # Closes all the frames 
+                    cap.release()
+                    #cv2.destroyAllWindows()
+                    #exit(0)
+
+                if cv2.waitKey(33) == ord('a'):
                     cap.release()
                     cv2.destroyAllWindows()
                     exit(0)

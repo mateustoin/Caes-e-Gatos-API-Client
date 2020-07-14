@@ -1,0 +1,8 @@
+build/
+dist/
+build
+dist
+__pycache__/
+__pycache__
+video_temp.mp4
+video_temp.webm

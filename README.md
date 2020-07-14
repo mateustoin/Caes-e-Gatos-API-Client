@@ -32,7 +32,7 @@ Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado
 
 `pip install -r requirements.txt`
 
-- *requests* é utilizado para realizar todas as requisições à API cep.la
+- *requests* é utilizado para realizar todas as requisições à API's citadas na introdução
 <!--
 - *rich* é utilizado para formatar os resultados, implementados em CepView para a visualização do usuário
 -->

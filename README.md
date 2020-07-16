@@ -79,36 +79,39 @@ Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado
 ---
 
 <img id="usage" src="img/4.png" style="height:300px, ">
-<!--
 
-## 1. Procura informações de endereço através de um CEP <a id="cep"></a>
+> Versão do Python utilizada: Python 3.7.6
 
-> main.py
-
-```python
-from CepControl import CepControl
-
-if __name__ == '__main__':
-    control = CepControl()
-    control.search_by_cep(input('Insira um CEP válido: '))
-```
-> TERMINAL
-
-<img src="img/out_cep.png" style="height:300px, ">
-
-## 2. Procura nomes dos bairros de cidades <a id="bairro"></a>
+## 1. Visualizando apenas fotos <a id="fotos-animais"></a>
 
 > main.py
 
 ```python
-from CepControl import CepControl
+python main.py
 
-if __name__ == '__main__':
-    control = CepControl()
-    control.search_by_neighborhood(uf='pe', city='recife')
+> Escolha opção de fotos
+
+Pressione letra 'ESC' para fechar a visualização
+Pressione qualquer outra tecla para ver mais fotos
 ```
 
-> TERMINAL (apenas parte da saída na imagem)
+<p align='center'>
+<img src="img/fotos.gif?raw=true">&nbsp;&nbsp;
+</p>    
 
-<img src="img/bairro.png" style="height:300px, ">
--->
+## 2. Visualizando apenas vídeos <a id="videos-animais"></a>
+
+> main.py
+
+```python
+python main.py
+
+> Escolha opção de fotos
+
+Pressione letra 'q' para fechar a visualização
+Pressione qualquer outra tecla para ver mais vídeos
+```
+
+<p align='center'>
+<img src="img/videos.gif?raw=true">&nbsp;&nbsp;
+</p>    

@@ -21,8 +21,8 @@
     - [AnimalController](#animalcontroller)
 3. [To-Do List da Aplicação](#todo-list)
 4. [Uso do API Client](#usage)
-    - [](#)
-    - [](#)
+    - [Visualização de fotos](#fotos-animais)
+    - [Visualização de vídeos](#videos-animais)
 
 ---
 
@@ -96,7 +96,7 @@ Pressione qualquer outra tecla para ver mais fotos
 ```
 
 <p align='center'>
-<img src="img/fotos.gif?raw=true">&nbsp;&nbsp;
+<img src="https://github.com/mateustoin/Caes-e-Gatos/blob/master/img/fotos.gif?raw=true">&nbsp;&nbsp;
 </p>    
 
 ## 2. Visualizando apenas vídeos <a id="videos-animais"></a>
@@ -113,5 +113,5 @@ Pressione qualquer outra tecla para ver mais vídeos
 ```
 
 <p align='center'>
-<img src="img/videos.gif?raw=true">&nbsp;&nbsp;
+<img src="https://github.com/mateustoin/Caes-e-Gatos/blob/master/img/videos.gif?raw=true">&nbsp;&nbsp;
 </p>    

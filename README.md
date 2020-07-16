@@ -33,31 +33,31 @@ Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado
 `pip install -r requirements.txt`
 
 - *requests* é utilizado para realizar todas as requisições à API's citadas na introdução
-<!--
-- *rich* é utilizado para formatar os resultados, implementados em CepView para a visualização do usuário
--->
+- *numpy* é utilizado para fazer as transformações da imagem em array, para que todas as informações dos pixels (RGB) sejam armazenadas de uma forma que o opencv consiga ler
+- *open_cv* carrega as imagens e vídeos para visualização na tela. 
+
 ---
 
 <img id="mvc" src="img/2.png" style="height:300px, ">
 
 ## AnimalModel <a id="animalmodel"></a>
-<!--
+
 <p>
-    A implementação do <i>CepModel</i> consiste em realizar as requisições para a API, além de tratar os dados inseridos pelo usuário e retornar os dados de resposta da API, de uma maneira que possa ser utilizada por outras estruturas. Além disso, lança <i>exceções</i> para diversos problemas que podem ocorrer no processo, seja pelo usuário ou pela API.
+    A implementação do <i>AnimalModel</i> consiste em realizar as requisições para as API's e tratar dados como tipo de arquivo, se é imagem, vídeo, gif. Cada classe (Cachorro e Gato) possui suas próprias requisições, a fim de resolver as particularidades de cada tipo de dado que é retornado. Além disso, lança <i>exceções</i> para diversos problemas que podem ocorrer no processo, seja pelo usuário ou pela API.
 </p>
--->
+
 ## AnimalView <a id="animalview"></a>
-<!--
+ 
 <p>
-    A implementação do <i>CepView</i> consiste apenas em organizar a visualização dos dados retornados pelo <i>CepModel</i>. A visualização deve ser feita de forma clara para o usuário, a fim de oferecer uma experiência boa para quem utiliza. No momento é feita através de prints no terminal, porém a forma como o projeto está organizado permite que, caso o projeto escale e seja feita uma interface gráfica, por exemplo, os únicos métodos que deveriam ser modificadas seriam as de <i>CepView</i>. 
+    A implementação do <i>AnimalView</i> consiste apenas em organizar a visualização dos dados retornados pelo <i>AnimalModel</i>. A visualização deve ser feita de forma clara para o usuário, a fim de oferecer uma experiência boa para quem utiliza. Atualmente toda a visualização é feita utilizando o <i>Opencv</i>, utilizando a janela padrão de visualização. Com a classe de visualização separada o projeto se torna mais modularizado, com responsabilidades independentes, tornando mais fácil futuras manutenções e melhorias. 
 </p>
--->
+
 ## AnimalController <a id="animalcontroller"></a>
-<!--
+
 <p>
-    A implementação do <i>CepControl</i> é feita para que o usuário tenha acesso aos métodos para o uso da API como um cliente. Estes métodos coletam os dados necessários do usuário, invoca o <i>model</i> para tratá-los e organizar os dados, depois utiliza esses resultados para invocar o <i>view</i> e exibir os dados para o usuário. Essa orquestração é feita apenas pelo <i>controller</i>, ao qual o usuário tem contato. Nele também são feitos os tratamentos de exceção, simplificando ainda mais o retorno para o usuário verificar e realizar ações a respeito.
+    A implementação do <i>AnimalControl</i> é feita para que o usuário tenha acesso aos métodos para o uso da API como um cliente. Estes métodos coletam os dados necessários do usuário, invoca o <i>model</i> para tratá-los e organizar os dados, depois utiliza esses resultados para invocar o <i>view</i> e exibir os dados para o usuário. Essa orquestração é feita apenas pelo <i>controller</i>, ao qual o usuário tem contato. Nele também são feitos os tratamentos de exceção, simplificando ainda mais o retorno para o usuário verificar e realizar ações a respeito.
 </p>
--->
+
 ---
 
 <img id="todo-list" src="img/3.png" style="height:300px, ">
@@ -69,7 +69,7 @@ Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado
 - [x] Visualiza fotos de doguinhos
 - [x] Visualiza vídeos de doguinhos
 - [ ] Visualiza fotos e vídeos de doguinhos
-- Ajuste de dimensão
+- [ ] Ajuste de dimensão
     - [ ] Fotos
     - [ ] Videos
 - [ ] Visualizar fotos de gatinhos

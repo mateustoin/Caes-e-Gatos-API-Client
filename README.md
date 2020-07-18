@@ -115,7 +115,3 @@ Pressione qualquer outra tecla para ver mais vídeos
 <p align='center'>
 <img src="https://github.com/mateustoin/Caes-e-Gatos/blob/master/img/videos.gif?raw=true">&nbsp;&nbsp;
 </p>    
-
-<iframe width="560" height="310" src="https://www.youtube.com/embed/r7XhWUDj-Ts" frameborder="0" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NUBeqGIhXaw" frameborder="0" allowfullscreen></iframe>

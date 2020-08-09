@@ -46,3 +46,40 @@ class Cachorro(object):
         video = request.urlretrieve(url_video, nome)
 
         return nome
+
+
+class Raposa(object):
+
+    def __init__(self):
+        self.__url = 'https://randomfox.ca/floof/'
+        self.__tipo = ''
+
+    def request_raposa(self):
+        response = requests.get(self.__url)
+        
+        '''
+        Tipos possíveis:
+            Imagem: jpg (retorna 0)
+        '''
+        tipo = response.json()['image'].split('.')
+        '''
+        https://randomfox.ca/images/114.jpg > ['https://randomfox', 'ca/images/114', 'jpg']
+        '''
+
+        self.__tipo = tipo[2]
+        codigo_tipo = 0
+
+        if (self.__tipo != 'jpg'):
+            codigo_tipo = 1
+        
+        return response.json(), codigo_tipo
+
+    def return_image(self, response):
+        url_image = response['image']
+        resp = request.Request(url_image, headers={'User-Agent': 'Mozilla/5.0'})
+        resp = request.urlopen(resp)
+        #resp = request.urlopen(url_image)
+        image = np.asarray(bytearray(resp.read()), dtype="uint8")
+        image = cv2.imdecode(image, cv2.IMREAD_COLOR)
+
+        return image

@@ -1,10 +1,11 @@
-from AnimalModel import Cachorro
+from AnimalModel import Cachorro, Raposa
 from AnimalView import AnimalView
 
 class AnimalController(object):
 
     def __init__(self):
         self.__cachorro = Cachorro()
+        self.__raposa = Raposa()
         
     def view_only_dog_photos(self):
         while True:
@@ -24,4 +25,11 @@ class AnimalController(object):
             video = self.__cachorro.return_video(response)
             AnimalView.view_video(video)
 
-    
+    def view_only_fox_photos(self):
+        while True:
+            response, code = self.__raposa.request_raposa()
+            if (code != 0):
+                continue
+            
+            image = self.__raposa.return_image(response)
+            AnimalView.view_photo(image)

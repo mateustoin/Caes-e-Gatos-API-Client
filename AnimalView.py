@@ -6,7 +6,22 @@ class AnimalView(object):
 
     @staticmethod
     def view_photo(image):
-        image = cv2.resize(image, (640, 480))
+        # Ficar próximo do 1280x720
+        # 4:3
+        height = image.shape[0]
+        width = image.shape[1]
+
+        # Onde foi obitida a loǵica da proporção
+        # https://www.tutorialkart.com/opencv/python/opencv-python-resize-image/
+        scale_percent = 80 # percent of original size
+            
+        while (height >= 1280):
+            width = int(image.shape[1] * scale_percent / 100)
+            height = int(image.shape[0] * scale_percent / 100)
+
+        dim = (width, height) 
+
+        image = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
         cv2.imshow("Foto do animal", image)
 
         while 1:

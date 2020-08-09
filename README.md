@@ -72,8 +72,9 @@ Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado
 - [ ] Ajuste de dimensão
     - [ ] Fotos
     - [ ] Videos
-- [ ] Visualizar fotos de gatinhos
-- [ ] Visualizar vídeos de gatinhos
+<!--- [ ] Visualizar fotos de gatinhos
+- [ ] Visualizar vídeos de gatinhos-->
+- [x] Visualizar fotos de raposinhas
 - [ ] Salvar fotos e vídeos que gostou
 
 ---

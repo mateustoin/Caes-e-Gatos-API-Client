@@ -68,14 +68,14 @@ Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado
 
 - [x] Visualiza fotos de doguinhos
 - [x] Visualiza vídeos de doguinhos
-- [ ] Visualiza fotos e vídeos de doguinhos
-- [ ] Ajuste de dimensão
-    - [ ] Fotos
-    - [ ] Videos
+- [x] Visualiza fotos e vídeos de doguinhos
+- [x] Ajuste de dimensão
+    - [x] Fotos
+    - [x] Videos
 <!--- [ ] Visualizar fotos de gatinhos
 - [ ] Visualizar vídeos de gatinhos-->
 - [x] Visualizar fotos de raposinhas
-- [ ] Salvar fotos e vídeos que gostou
+- [x] Salvar fotos e vídeos que gostou
 
 ---
 

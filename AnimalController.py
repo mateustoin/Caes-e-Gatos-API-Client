@@ -25,6 +25,17 @@ class AnimalController(object):
             video = self.__cachorro.return_video(response)
             AnimalView.view_video(video)
 
+    def view_dog_photos_and_videos(self):
+        while True:
+            response, code = self.__cachorro.request_cachorro()
+            
+            if (code == 0):
+                image = self.__cachorro.return_image(response)
+                AnimalView.view_photo(image)
+            elif (code == 2):
+                video = self.__cachorro.return_video(response)
+                AnimalView.view_video(video)
+
     def view_only_fox_photos(self):
         while True:
             response, code = self.__raposa.request_raposa()

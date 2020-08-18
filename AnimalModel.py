@@ -6,11 +6,11 @@ import cv2
 class Cachorro(object):
 
     def __init__(self):
-        self.__url = 'https://random.dog/woof.json'
+        self.__url = 'https://random.dog/woof.json' # URL base para acessar API
         self.__tipo = ''
 
     def request_cachorro(self):
-        response = requests.get(self.__url)
+        response = requests.get(self.__url) # Realiza requisição à API
 
         '''
         Tipos possíveis:
@@ -18,6 +18,8 @@ class Cachorro(object):
             Gif: gif (retorna 1)
             Video: mp4, webm (retorna 2)
         '''
+        
+        # Pega resultado da requisição e separa url para definir extensão da mídia 
         tipo = response.json()['url'].split('.')
         self.__tipo = tipo[2]
         codigo_tipo = 0
@@ -27,6 +29,7 @@ class Cachorro(object):
         elif (self.__tipo == 'mp4' or self.__tipo == 'webm'):
             codigo_tipo = 2
 
+        # Retorna resposta completa e o tipo de extensão da mídia
         return response.json(), codigo_tipo
 
 

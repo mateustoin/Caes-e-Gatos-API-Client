@@ -32,6 +32,7 @@ class Cachorro(object):
 
     def return_image(self, response):
         url_image = response['url']
+        print(response['url'])
         resp = request.urlopen(url_image)
         image = np.asarray(bytearray(resp.read()), dtype="uint8")
         image = cv2.imdecode(image, cv2.IMREAD_COLOR)

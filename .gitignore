@@ -5,5 +5,5 @@ dist
 __pycache__/
 __pycache__
 
-saved_videos/*.mp4
-saved_videos/*.webm
+saved_videos/
+saved_photos/

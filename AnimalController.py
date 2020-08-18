@@ -1,11 +1,22 @@
 from AnimalModel import Cachorro, Raposa
 from AnimalView import AnimalView
+import os
 
 class AnimalController(object):
 
     def __init__(self):
         self.__cachorro = Cachorro()
         self.__raposa = Raposa()
+        
+        # Cria pastas de fotos e vídeos salvos se não existir
+        try:
+            if not os.path.isfile('./saved_photos'):
+                os.mkdir('saved_photos')
+
+            if not os.path.isfile('./saved_videos'):
+                os.mkdir('saved_videos')
+        except:
+            pass
         
     def view_only_dog_photos(self):
         while True:

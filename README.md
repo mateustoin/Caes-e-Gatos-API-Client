@@ -3,7 +3,11 @@
 <!--- # Requisição de CEP, Rua, Cidade e Estados --->
 
 <p>
-    API Client criado para visualizar fotos e vídeos de <b>doguinhos e gatinhos</b>. O objetivo é praticar diversos conceitos da linguagem e padrões de projeto, além de descontrair com imagens e vídeos engraçados durante a quarentena. O padrão de projeto escolhido para o desenvolvimento é o <b>MVC (Model-View-Controller)</b>, implementado em <b>Python</b>.
+    API Client criado para visualizar fotos e vídeos de <b>doguinhos e gatinhos</b>. O objetivo é praticar diversos conceitos da linguagem e padrões de projeto, além de descontrair com imagens e vídeos engraçados durante a quarentena. O padrão de projeto escolhido para o desenvolvimento é o <b>MVC (Model-View-Controller)</b>, implementado em <b>Python</b>. 
+</p>
+
+<p>
+    <i><b>edit:</b> Infelizmente a API que seria utilizada para visualizar os gatinhos parou de funcionar durante o desenvolvimento, portanto foi substituída por outra responsável por visualizar raposas! Em respeito aos gatinhos que seriam mostrados e eram muito legais, as referências visuais a eles serão mantidas no repositório.
 </p>
 
 <p>
@@ -115,4 +119,4 @@ Pressione qualquer outra tecla para ver mais vídeos
 
 <p align='center'>
 <img src="https://github.com/mateustoin/Caes-e-Gatos/blob/master/img/videos.gif?raw=true">&nbsp;&nbsp;
-</p>    
+</p> 

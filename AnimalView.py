@@ -14,13 +14,18 @@ class AnimalView(object):
         height = image.shape[0]
         width = image.shape[1]
 
+        original_img = image
+        
         # Onde foi obitida a loǵica da proporção
         # https://www.tutorialkart.com/opencv/python/opencv-python-resize-image/
         scale_percent = 90 # percent of original size
             
-        while (height > 1280):
-            width = int(image.shape[1] * scale_percent / 100)
-            height = int(image.shape[0] * scale_percent / 100)
+        while (True):
+            if (height > 1080) or (width > 1920):
+                width = int(width * scale_percent / 100)
+                height = int(height * scale_percent / 100)
+            else:
+                break
 
         dim = (width, height) 
 
@@ -40,9 +45,10 @@ class AnimalView(object):
             elif tecla == 115: # letra 's' pressionada
                 num = randint(0, 10000)
                 fileName = 'saved_photos/image' + str(num) + '.jpg'
-                cv2.imwrite(fileName, image)
+                cv2.imwrite(fileName, original_img)
 
             else: # Qualquer outra tecla
+                cv2.destroyWindow("Foto do animal")
                 cv2.destroyAllWindows()
                 break
 
@@ -65,6 +71,7 @@ class AnimalView(object):
                 tecla = cv2.waitKey(33)
                 if tecla == 27: # Esc pressionado 
                     cap.release()
+                    cv2.destroyWindow('Video del catiorro')
                     cv2.destroyAllWindows()
                     try:
                         os.remove('video_temp.mp4') 
@@ -98,29 +105,16 @@ class AnimalView(object):
 
                 else:
                     cap.release()
+                    cv2.destroyWindow('Video del catiorro')
+                    cv2.destroyAllWindows()
                     try:
                         os.remove('video_temp.mp4') 
                         os.remove('video_temp.webm')
                     except:
                         pass 
                     break
-                '''
-                # Press Q on keyboard to  exit 
-                if cv2.waitKey(25) & 0xFF == ord('q'): 
-                    # Closes all the frames 
-                    cap.release()
-                    #cv2.destroyAllWindows()
-                    #exit(0)
-
-                if cv2.waitKey(33) == ord('a'):
-                    cap.release()
-                    cv2.destroyAllWindows()
-                    exit(0)
-                '''
 
             # Break the loop 
             else:
                 cap.release()
                 cap = cv2.VideoCapture(nome_video)
-            
-        

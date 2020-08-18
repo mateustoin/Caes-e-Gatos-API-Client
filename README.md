@@ -32,7 +32,7 @@
 
 # Instalando pacotes <a id="instalacao"></a>
 
-Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado e utilizar o comando a seguir:
+Para instalar os pacotes utilizados no projeto, basta ter o <i>python 3</i> e <i>pip</i> instalado e utilizar o comando a seguir na pasta do projeto:
 
 `pip install -r requirements.txt`
 
@@ -81,11 +81,37 @@ Para instalar os pacotes utilizados no projeto, basta ter o <i>pip</i> instalado
 - [x] Visualizar fotos de raposinhas
 - [x] Salvar fotos e vídeos que gostou
 
+<p>
+    <i>edit: Todos os itens da lista foram concluídos durante a live e algumas pequenas melhorias após o final do projeto, com o objetivo de garantir o funcionamento sem erros.</i>
+</p>
+
 ---
 
 <img id="usage" src="img/4.png" style="height:300px, ">
 
-> Versão do Python utilizada: Python 3.7.6
+> Versão do Python que funcionará: Python 3.x
+
+<p>
+    A versão final da aplicação oferece 4 opções quando o <code>main.py</code> é <b>executado</b>:
+
+</p>
+
+<ol>
+    <li> Visualizar apenas fotos de doguinhos </li>
+    <li> Visualizar apenas vídeos de doguinhos </li>
+    <li> Visualizar fotos e vídeos de doguinhos </li>
+    <li> Visualizar apenas fotos de raposas </li>
+</ol>
+
+<p>
+    Em todas elas os seguintes <b>comandos</b> são válidos:
+</p>
+
+<ul>
+    <li> Pressionar letra 's' para salvar foto ou vídeo</li>
+    <li> Pressiocar ESC para encerrar aplicação</li>
+    <li> Pressionar qualquer outra letra para carregar próxima foto ou vídeo </li>
+</ul>
 
 ## 1. Visualizando apenas fotos <a id="fotos-animais"></a>
 
@@ -97,6 +123,7 @@ python main.py
 > Escolha opção de fotos
 
 Pressione letra 'ESC' para fechar a visualização
+Pressione a letra 's' para salvar a foto
 Pressione qualquer outra tecla para ver mais fotos
 ```
 
@@ -113,8 +140,9 @@ python main.py
 
 > Escolha opção de fotos
 
-Pressione letra 'q' para fechar a visualização
-Pressione qualquer outra tecla para ver mais vídeos
+Pressione letra 'ESC' para fechar a visualização
+Pressione a letra 's' para salvar o vídeo
+Pressione qualquer outra tecla para ver mais fotos
 ```
 
 <p align='center'>

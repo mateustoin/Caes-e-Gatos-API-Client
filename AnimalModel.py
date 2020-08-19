@@ -6,14 +6,21 @@ import cv2
 class Cachorro(object):
 
     def __init__(self):
-        self.__url = 'https://random.dog/woof.json' # URL base para acessar API
+        self.__url = 'https://random.dog/woof.json' # URL base para acessar API do cachorro
         self.__tipo = ''
 
     def request_cachorro(self):
+        """[Resumo]
+            Essa função é responsável por realizar requisições para a API e determinar 
+            o tipo da mídia que foi retornada.
+
+        Retornos:
+            [JSON, int]: JSON contém as informações da requisição e inteiro indica tipo de mídia.
+        """
         response = requests.get(self.__url) # Realiza requisição à API
 
         '''
-        Tipos possíveis:
+        Tipos possíveis de mídia:
             Imagem: jpg, PNG, png, JPG, jpeg (retorna 0)
             Gif: gif (retorna 1)
             Video: mp4, webm (retorna 2)
@@ -34,6 +41,18 @@ class Cachorro(object):
 
 
     def return_image(self, response):
+        """[Resumo]
+            Função responsável por tratar o resultado da requisição quando o link
+            é referente a mídia de imagem, transformando-a em um frame que possa
+            ser exibido pelo OpenCV.
+
+        Args:
+            response (JSON): Resposta retornada pela função request_cachorro().
+
+        Returns:
+            [cv2.image]: Imagem decodificada com cores pelo OpenCV.
+        """
+        
         url_image = response['url']
         print(response['url'])
         resp = request.urlopen(url_image)
@@ -43,6 +62,16 @@ class Cachorro(object):
         return image
 
     def return_video(self, response):
+        """[Resumo]
+            Função responsável por realizar download da mídica quando é do tipo vídeo.
+            Salva arquivo temporário na mesma pasta para que seja exibido na interface.
+
+        Args:
+            response (JSON): Resposta retornada pela função request_cachorro().
+
+        Returns:
+            [str]: String contendo nome do vídeo temporário
+        """
         nome = 'video_temp.' + self.__tipo
         url_video = response['url']
 
@@ -55,10 +84,18 @@ class Cachorro(object):
 class Raposa(object):
 
     def __init__(self):
-        self.__url = 'https://randomfox.ca/floof/'
+        self.__url = 'https://randomfox.ca/floof/' # URL base para acessar API da raposa
         self.__tipo = ''
 
     def request_raposa(self):
+        """[Resumo]
+            Essa função é responsável por realizar requisições para a API e determinar 
+            o tipo da mídia que foi retornada.
+
+        Retornos:
+            [JSON, int]: JSON contém as informações da requisição e inteiro indica tipo de mídia.
+        """
+        
         response = requests.get(self.__url)
         
         '''
@@ -79,6 +116,18 @@ class Raposa(object):
         return response.json(), codigo_tipo
 
     def return_image(self, response):
+        """[Resumo]
+            Função responsável por tratar o resultado da requisição quando o link
+            é referente a mídia de imagem, transformando-a em um frame que possa
+            ser exibido pelo OpenCV.
+
+        Args:
+            response (JSON): Resposta retornada pela função request_cachorro().
+
+        Returns:
+            [cv2.image]: Imagem decodificada com cores pelo OpenCV.
+        """
+        
         url_image = response['image']
         resp = request.Request(url_image, headers={'User-Agent': 'Mozilla/5.0'})
         resp = request.urlopen(resp)

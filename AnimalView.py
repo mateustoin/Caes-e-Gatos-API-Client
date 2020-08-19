@@ -9,8 +9,14 @@ class AnimalView(object):
 
     @staticmethod
     def view_photo(image):
-        # Ficar próximo do 1280x720
-        # 4:3
+        """[Resumo]
+            Função responsável por receber imagem decodificada e exibir na tela.
+            Além disso, monitora os botões clicados enquanto a mídia é exibida e
+            redimensiona fotos grandes para ser visível na tela.
+            
+        Args:
+            image (cv2.image): Imagem propriamente decodificada.
+        """
         height = image.shape[0]
         width = image.shape[1]
 
@@ -54,6 +60,14 @@ class AnimalView(object):
 
     @staticmethod
     def view_video(nome_video):
+        """[Resumo]
+            Função responsável por abrir vídeo temporário na própria pasta e
+            exibir em loop na tela do OpenCV. Além disso, trata as entradas e teclas
+            para realizar as operações de navegação da aplicação.
+
+        Args:
+            nome_video (str): Nome da string do vídeo temporário gerado Depois da requisição.
+        """
         cap = cv2.VideoCapture(nome_video)
 
         if (cap.isOpened()== False):  

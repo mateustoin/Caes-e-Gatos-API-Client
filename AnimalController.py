@@ -5,6 +5,10 @@ import os
 class AnimalController(object):
 
     def __init__(self):
+        """[Resumo]
+            Cria objetos dos animais para realizar suas funções e cria pastas de 
+            fotos e vídeos salvos, caso não existam.
+        """
         self.__cachorro = Cachorro()
         self.__raposa = Raposa()
         
@@ -19,6 +23,10 @@ class AnimalController(object):
             pass
         
     def view_only_dog_photos(self):
+        """[Resumo]
+            Loop infinito onde só executa a função de exibir 
+            fotos se o retorno da requisição for imagem.
+        """
         while True:
             response, code = self.__cachorro.request_cachorro()
             if (code != 0):
@@ -28,6 +36,11 @@ class AnimalController(object):
             AnimalView.view_photo(image)
 
     def view_only_dog_videos(self):
+        """[Resumo]
+            Loop infinito onde só executa a função de exibir 
+            vídeos se o retorno da requisição for video.
+        """
+        
         while True:
             response, code = self.__cachorro.request_cachorro()
             if (code != 2):
@@ -37,6 +50,10 @@ class AnimalController(object):
             AnimalView.view_video(video)
 
     def view_dog_photos_and_videos(self):
+        """[Resumo]
+            Loop infinito onde só executa a função de exibir 
+            fotos e vídeos se o retorno da requisição forem imagens ou vídeos.
+        """
         while True:
             response, code = self.__cachorro.request_cachorro()
             
@@ -48,6 +65,11 @@ class AnimalController(object):
                 AnimalView.view_video(video)
 
     def view_only_fox_photos(self):
+        """[Resumo]
+            Loop infinito onde só executa a função de exibir 
+            fotos se o retorno da requisição for imagem.
+        """
+        
         while True:
             response, code = self.__raposa.request_raposa()
             if (code != 0):

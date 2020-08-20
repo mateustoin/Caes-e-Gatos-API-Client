@@ -27,6 +27,7 @@
 4. [Uso do API Client](#usage)
     - [Visualização de fotos](#fotos-animais)
     - [Visualização de vídeos](#videos-animais)
+5. [Teste na sua máquina sem uso do python](#exec)
 
 ---
 
@@ -148,3 +149,28 @@ Pressione qualquer outra tecla para ver mais fotos
 <p align='center'>
 <img src="https://github.com/mateustoin/Caes-e-Gatos/blob/master/img/videos.gif?raw=true">&nbsp;&nbsp;
 </p> 
+
+# Teste na sua máquina sem uso do python <a id="exec"></a>
+
+<p>
+    Utilizando a biblioteca <i>pyinstaller</i> foi possível realizar um build para criar um executável do protótipo apresentado, a fim de que possa ser executado em qualquer máquina com Windows ou Linux.
+</p>
+
+## Executando no Windows
+
+<a href="https://www.dropbox.com/s/ma7anfgq5voyr7i/app_caes_e_raposas_win.exe?dl=0">Download do executável para Windows</a>
+
+<p>
+    Foi realizado o upload do executável para windows, portanto basta fazer o <b><a href="https://www.dropbox.com/s/ma7anfgq5voyr7i/app_caes_e_raposas_win.exe?dl=0">download</a></b> e executar na sua máquina. É possível que apareça uma mensagem dizendo que o executável pode não ser seguro. Ainda não sei como resolver isso, mas caso tenha dúvidas, pode analisar o código e criar seu próprio executável utilizando a biblioteca citada acima.
+</p>
+
+## Executando no Linux
+
+<a href="https://www.dropbox.com/s/bz92q157rde9trz/app-caes-e-raposas-linux?dl=0">Download do executável para linux</a>
+
+<p>
+    Foi realizado o upload do executável para linux também, portanto basta fazer o <b><a href="https://www.dropbox.com/s/bz92q157rde9trz/app-caes-e-raposas-linux?dl=0">download</a></b> e executar pelo terminal na sua máquina. No linux não há problemas com mensagens de segurança, basta abrir a pasta do arquivo no terminal e executar o comando:
+</p>
+
+<code>./app-caes-e-raposas-linux</code>
+

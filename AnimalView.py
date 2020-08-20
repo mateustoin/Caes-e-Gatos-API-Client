@@ -47,7 +47,8 @@ class AnimalView(object):
 
             elif tecla == -1: # Nada pressionado
                 continue
-
+            
+            # Salva frame original da imagem na pasta 'saved_photos'
             elif tecla == 115: # letra 's' pressionada
                 num = randint(0, 10000)
                 fileName = 'saved_photos/image' + str(num) + '.jpg'
@@ -102,6 +103,7 @@ class AnimalView(object):
                     fileNameTargetMp4 = 'saved_videos/video' + str(num) + '.mp4'
                     fileNameTargetWebm = 'saved_videos/video' + str(num) + '.webm'
 
+                    # Copia o vídeo para a pasta 'saved_videos'
                     try:
                         shutil.copyfile(fileNameMp4, 'saved_videos/' + fileNameMp4)
                         shutil.copyfile(fileNameWebm, 'saved_videos/' + fileNameWebm)

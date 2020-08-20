@@ -27,7 +27,7 @@
 4. [Uso do API Client](#usage)
     - [Visualização de fotos](#fotos-animais)
     - [Visualização de vídeos](#videos-animais)
-5. [Teste na sua máquina sem uso do python](#exec)
+5. [Teste na sua máquina sem precisar do python](#exec)
 
 ---
 
@@ -150,7 +150,7 @@ Pressione qualquer outra tecla para ver mais fotos
 <img src="https://github.com/mateustoin/Caes-e-Gatos/blob/master/img/videos.gif?raw=true">&nbsp;&nbsp;
 </p> 
 
-# Teste na sua máquina sem uso do python <a id="exec"></a>
+# Teste na sua máquina sem precisar do python <a id="exec"></a>
 
 <p>
     Utilizando a biblioteca <i>pyinstaller</i> foi possível realizar um build para criar um executável do protótipo apresentado, a fim de que possa ser executado em qualquer máquina com Windows ou Linux.
